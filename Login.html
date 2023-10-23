@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <header>Sign In</header>
+        </div>
+        <div class="main">
+            <img class="image"src="download.png"/>
+            <div class="info">
+                <h1>Welcome!</h1>
+                <p>Please sign in to access content !</p>
+            </div>
+        </div>
+        <form action="Listing.html" method="post">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+        </form>
+            <div class="SignIn">
+              <button type="submit" name="submit" class="SignIn" onclick="redirectToHomePage()">Sign In</button>
+            </div>
+   
+        <footer class="footer">&copy; All rights reserved Gregory Galli</footer>
+    </div>
+    <script>
+        function redirectToHomePage() {
+          window.location.href = "Listing.html";
+        }
+        </script>
+</body>
+
+</html>

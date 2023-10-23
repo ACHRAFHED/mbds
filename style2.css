@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "header header header header"
+        "ad ad ad ad"
+        "ad ad ad ad"
+        "footer footer footer footer";
+    grid-template-rows: auto 50% 50% auto auto;
+    width: 100%;
+    background-color: #fff;
+    margin: 0;
+}
+
+.head {
+    grid-area: header;
+    background-color: #0078d4;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header {
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #0078d4;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    button {
+        margin-bottom: 10px;
+    }
+}
+
+/* Style Du Listing */
+
+.choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.listButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.listButton:hover {
+    background-color: #228ad9e8;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.listButton.active {
+    background-color: #228ad9e8;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.second-container {
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.ad-section{
+    grid-area: ad;
+    display: inline-flexbox;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ad {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: auto auto;
+    grid-template-areas: "image . . info";
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+
+}
+
+
+.ad-image {
+    grid-area: 1;
+    margin-right: 10px;
+
+}
+
+.ad-info {
+    grid-area: info;
+    margin-left: 70px ;
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: auto 50% auto;
+    grid-template-areas: "title title title title"
+        "description description description description"
+        "hour . . price";
+}
+
+h1 {
+    grid-area: title;
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    grid-area: description;
+    margin: 0;
+    font-size: 14px;
+}
+
+.ad-price {
+    grid-area: price;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    justify-self: end;
+    float: right;
+ 
+   
+}
+
+.ad-hour {
+    grid-area: hour;
+    flex-wrap: nowrap;
+    font-size: 14px;
+}
